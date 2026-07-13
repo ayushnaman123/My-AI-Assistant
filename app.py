@@ -51,7 +51,8 @@ with task_bot:
                     st.success("📚 Result from Wikipedia:")
                     st.info(response["data"])
                 elif response["type"] == "play":
-                    st.success(f"🎵 Launching YouTube for '{response['data']}'")
+                    st.success(f"🎵 Automation Process Initiated for '{response['target']}'")
+                    st.markdown(f"[👉 Click Here to Watch on YouTube]({response['data']})")
                 elif response["type"] == "time":
                     st.metric(label="System Response Time", value=response["data"])
             elif response["status"] == "warning":
